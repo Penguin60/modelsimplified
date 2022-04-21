@@ -2,6 +2,8 @@ import React, {useState, useEffect, useCallback} from 'react';
 import axios from 'axios';
 import {useDropzone} from 'react-dropzone';
 
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+
 function Dropzone({ cardProfileId, cardName }) {
     const onDrop = useCallback(acceptedFiles => {
       const file = acceptedFiles[0];
@@ -10,7 +12,7 @@ function Dropzone({ cardProfileId, cardName }) {
       formData.append("file", file);
   
       axios.post(
-        `http://localhost:8080/api/v1/card-profile/${cardProfileId}/image/upload`,
+        `api/v1/card-profile/${cardProfileId}/image/upload`,
       formData,
       {
         headers: {
