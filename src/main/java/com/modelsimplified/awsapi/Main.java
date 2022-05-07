@@ -19,8 +19,8 @@ public class Main {
 	@Bean
 	CommandLineRunner run(CardProfileService cardProfileService) {
 		return args -> {
-//			cardProfileService.saveCardProfile(new CardProfile(UUID.randomUUID().toString(), "Card 01", null));
-//			cardProfileService.saveCardProfile(new CardProfile(UUID.randomUUID().toString(), "Card 02", null));
+			cardProfileService.saveCardProfile(new CardProfile(UUID.randomUUID().toString(), "Card 01", null));
+			cardProfileService.saveCardProfile(new CardProfile(UUID.randomUUID().toString(), "Card 02", null));
 		};
 	}
 
