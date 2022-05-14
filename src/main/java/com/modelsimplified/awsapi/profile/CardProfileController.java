@@ -40,4 +40,12 @@ public class CardProfileController {
         return cardProfileService.downloadCardProfileImage(cardProfileId);
     }
 
+    @PostMapping(
+            path="addCard"
+    )
+    public void addNewCardProfile() {
+        String randId = UUID.randomUUID().toString();
+        cardProfileService.saveCardProfile(new CardProfile(randId, "Card_" + randId, null));
+    }
+
 }

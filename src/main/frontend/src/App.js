@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useCallback} from 'react';
+import { Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Greeting from './Greeting';
 import AnimatedClouds from './AnimatedClouds'
-import CardProfiles from './CardProfiles'
 import HomeProducts from './HomeProducts';
 
 
@@ -12,9 +12,7 @@ function MainInterface() {
     <>
       <Greeting />
       <AnimatedClouds />
-      <HomeProducts>
-        <CardProfiles />
-      </HomeProducts>
+      <HomeProducts />
     </>
   );
 }

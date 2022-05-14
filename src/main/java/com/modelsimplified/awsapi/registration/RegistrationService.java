@@ -42,7 +42,10 @@ public class RegistrationService {
 //        String link = "http://" + getHost() + ":" + getPort() + "/api/v1/registration/confirm?token=" + token;
 //        String link = "http://" + "simplified-env.eba-pnkbxime.ca-central-1.elasticbeanstalk.com/api/v1/registration/confirm?token=" + token;
         String link = siteURL + "/api/v1/registration/confirm?token=" + token;
-        emailSender.send(request.getEmail(), buildEmail(request.getFirstName(), link));
+        emailSender.send(request.getEmail(),
+                buildEmail(request.getFirstName(), link),
+                "Confirm your Modelsimplified Account",
+                "hello.modelsimplified@gmail.com");
         return token;
     }
 

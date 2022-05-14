@@ -26,7 +26,7 @@ img {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50%;
+  margin-top: 10px;
 }
 
 #greetingMessage {
@@ -50,7 +50,32 @@ right: 100px;
 	background-color: white;
 }
 .secondHome {
-	background-color: white;	
+	background-color: white;
+	position: relative;
+	top: 320px;
+	padding-bottom: 881px;
+}
+#productsGreeting {
+	float: left;
+	position: relative;
+	left: 200px;
+	top: 275px;
+	font-size: 50px;
+	text-shadow: 1.3px 1.3px;
+}
+#productsLink {
+	float: left;
+	position: relative;
+	top: 450px;
+	left: -95px;
+	text-decoration: none;
+	color: white;
+	background-color: #00b4ff;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 30px;
+	font-size: 20px;
 }
 body {
 	background: #00b4ff;
@@ -61,6 +86,25 @@ body {
 	overflow-x: hidden;
 }
 
+.productsContainer {
+	background-color: white;
+	border-radius: 10px;
+	margin-left: 0px;
+	width: 1300px;
+	text-align: center;
+	position:relative;
+	left: 109.5px;
+	top: 25px;
+	margin-bottom: 20px;
+}
+
+#productsText {
+	padding: 10px;
+	font-size: 250%;
+	margin: 0px;
+	position: relative;
+}
+
 #background-wrap {
     bottom: 0;
 	left: 0;
@@ -69,6 +113,57 @@ body {
 	right: 0;
 	top: 0;
 	z-index: -1;
+}
+
+#newProductBtn {
+	background-color: #00b4ff;
+	border: none;
+	font-size: 30px;
+	border-radius: 10px;
+	padding: 8px;
+	margin-bottom: 20px;
+	color: white;
+	font-family:monospace;
+	position: relative;
+	right: -455px;
+}
+
+#homeLink {
+	text-decoration: none;
+	color: #00b4ff;
+	font-size: 20px;
+	position: relative;
+	left: -447px;
+}
+
+#newProductBtn:hover {
+	background-color: white;
+	color: #00b4ff;
+}
+
+.buyItNowBtn {
+	background-color: #00b4ff;
+	border: none;
+	font-size: 20px;
+	border-radius: 10px;
+	padding: 6px;
+	color: white;
+	font-family:monospace;
+	position: relative;
+	margin-bottom: 7px;
+}
+
+.productDiv {
+	border: 2.5px solid #333;
+	border-radius: 10px;
+	margin: 75px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 15px;
+	padding: 10px;
 }
 
 /* KEYFRAMES */

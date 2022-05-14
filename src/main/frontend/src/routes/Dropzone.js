@@ -25,6 +25,7 @@ function Dropzone({ cardProfileId, cardName }) {
         console.log(err);
       })
     }, []);
+
     const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
   
     return (
@@ -33,7 +34,9 @@ function Dropzone({ cardProfileId, cardName }) {
         {
           isDragActive ?
             <p>Drop the image here ...</p> :
-            <h1 id = {cardName}>{cardName}</h1>
+            <>
+              <h1 id = {cardName}>{cardName}</h1>
+            </>
         }
       </div>
     )

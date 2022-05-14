@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import axios from 'axios';
-import Dropzone from './Dropzone';
+import CardGridItem from './CardGridItem';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
@@ -19,20 +19,18 @@ const CardProfiles = () => {
     useEffect(() => {
       fetchCardProfiles();
     }, []);
-  
-    return cardProfiles.map((cardProfile, index) => {
-  
-      return (
-      <div key={index}>
-        {cardProfile.cardProfileId ? <img src={`${process.env.REACT_APP_API_URL || ""}/api/v1/card-profile/${cardProfile.cardProfileId}/image/download`}/> : null}
-        {/* todo: Profile image */}
-        <br />
-        <br />
-          <Dropzone {...cardProfile} />
-          <br />
-      </div>
-      )
-    })
+
+    return (
+      <div class = "grid-container"> 
+      {
+          cardProfiles.map((cardProfile, index) => {
+            return (
+              <CardGridItem cardProfile={cardProfile} index={index} />
+            )
+      })
+    }
+    </div>
+    )
   };
 
   export default CardProfiles;
