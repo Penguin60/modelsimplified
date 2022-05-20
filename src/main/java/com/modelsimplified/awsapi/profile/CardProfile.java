@@ -29,6 +29,10 @@ public class CardProfile {
         return Optional.ofNullable(cardProfileImageLink);
     }
 
+    public void setCardName(String cardName) {
+        this.cardName = cardName;
+    }
+
     public void setCardProfileImageLink(String cardProfileImageLink) {
         this.cardProfileImageLink = cardProfileImageLink;
     }

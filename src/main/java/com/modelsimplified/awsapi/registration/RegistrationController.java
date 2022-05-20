@@ -1,6 +1,8 @@
 package com.modelsimplified.awsapi.registration;
 
+import com.modelsimplified.awsapi.appuser.AppUser;
 import lombok.AllArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,8 +16,14 @@ public class RegistrationController {
 
     private RegistrationService registrationService;
 
-    @PostMapping
-    public String register(@RequestBody RegistrationRequest request, HttpServletRequest req)  throws UnknownHostException {
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String register(
+            @RequestParam("firstName") String firstName,
+            @RequestParam("lastName") String lastName,
+            @RequestParam("password") String password,
+            @RequestParam("email") String email,
+            HttpServletRequest req)  throws UnknownHostException {
+        RegistrationRequest request = new RegistrationRequest(firstName, lastName, password, email);
         return registrationService.register(request, getSiteURL(req));
     }
 

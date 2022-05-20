@@ -36,7 +36,7 @@ public class CardProfileService {
         // 1. Check if image is not empty
         isFileEmpty(file);
         // 2. If file is an image
-        isImage(file);
+//        isImage(file);
         // 3. The user exists in our database
         CardProfile card = getCardProfileOrThrow(cardProfileId);
 //        CardProfile card = cardProfileDataAccessService.getCardProfile(cardProfileId);
@@ -46,9 +46,11 @@ public class CardProfileService {
         // 5. Store the image in s3 and update database (userProfileImageLink) with s3 image link
         String path = String.format("%s/%s", BucketName.PROFILE_IMAGE.getBucketName(), card.getCardProfileId());
         String filename = String.format("%s-%s", file.getOriginalFilename(), UUID.randomUUID());
+        String productName = String.format("%s", file.getOriginalFilename());
 
         try {
             fileStore.save(path, filename, Optional.of(metadata), file.getInputStream());
+            card.setCardName(productName);
             card.setCardProfileImageLink(filename);
             saveCardProfile(card);
         } catch (IOException e) {

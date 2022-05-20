@@ -7,6 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ProductsPage from "./routes/ProductsPage";
 import Greeting from './Greeting';
+import RegisterPage from './routes/RegisterPage';
 
 ReactDOM.render(
   // <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Route path='/' element={<App />} />
         <Route path = 'productsPage' element={<ProductsPage />} />
         <Route path = 'Home' element={<App />} />
+        <Route path = 'register' element={<RegisterPage />} />
       </Routes>
     </BrowserRouter>
   // </React.StrictMode>

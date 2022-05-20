@@ -15,7 +15,7 @@ public class PurchaseEmailService {
     private final static Logger LOGGER = LoggerFactory.getLogger(PurchaseEmailService.class);
     private final EmailService emailService;
 
-    public void sendPurchase() {
+    public void sendPurchase(String cardName) {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String name = principal.toString();
 
@@ -24,7 +24,8 @@ public class PurchaseEmailService {
             name = loggedInUser.getFirstName() + " " + loggedInUser.getLastName();
         }
 
-        String email = String.format("Hi Radean, %s bought the Hello World Card for this many Bartlett Bucks!", name);
+
+        String email = String.format("Hi Radean, %s bought the '%s'!", name, cardName);
         emailService.send("radean.rashed@gmail.com",
                 email, "New Purchase", "hello.modelsimplified@gmail.com");
     }

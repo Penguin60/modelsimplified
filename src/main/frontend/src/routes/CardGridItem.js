@@ -5,7 +5,9 @@ import Dropzone from './Dropzone';
 const CardGridItem = ({cardProfile, index}) => {
 
     const buyIt = () => {
-        axios.post("api/v1/purchase/sendPurchaseEmail").then(res => {
+        const formData = new FormData();
+        formData.append("cardName", cardProfile.cardName);
+        axios.post("api/v1/purchase/sendPurchaseEmail", formData).then(res => {
             console.log("It Works!")
         })
 
