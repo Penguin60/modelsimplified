@@ -1,25 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter} from 'react-router-dom'
-import {BrowserRouter, Route, Routes} from "react-router-dom"
+import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom"
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ProductsPage from "./routes/ProductsPage";
-import Greeting from './Greeting';
-import RegisterPage from './routes/RegisterPage';
+import LandingPage from './routes/LandingPage';
 
 ReactDOM.render(
-  // <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App />} />
-        <Route path = 'productsPage' element={<ProductsPage />} />
-        <Route path = 'Home' element={<App />} />
-        <Route path = 'register' element={<RegisterPage />} />
+        <Route path = '/products' element={<ProductsPage />} />
+        <Route path = '/home' element={<App />} />
+        <Route path = '/' element={<LandingPage />} />
       </Routes>
     </BrowserRouter>
-  // </React.StrictMode>
   ,
   document.getElementById('root')
 );

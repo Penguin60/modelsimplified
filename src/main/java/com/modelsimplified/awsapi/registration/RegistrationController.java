@@ -1,6 +1,5 @@
 package com.modelsimplified.awsapi.registration;
 
-import com.modelsimplified.awsapi.appuser.AppUser;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

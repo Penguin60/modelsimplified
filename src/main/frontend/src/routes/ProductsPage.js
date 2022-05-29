@@ -12,12 +12,12 @@ const ProductsPage = () => {
   }
 
   return(
-    <>
+  <>
     <div className='productsBackground'>
       <div className='productsContainer'>
         <h1 id='productsText'>Products</h1>
         <CardProfiles />
-        <Link to="/Home" id='homeLink'>Go Back Home!</Link>
+        <Link to="/home" id='homeLink'>Go Back Home!</Link>
         <button id = "newProductBtn" onClick={handleNewProductBtn}>Add Product</button>
       </div>
     </div>

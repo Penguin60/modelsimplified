@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import CardProfiles from './CardProfiles';
 
-const RegisterPage = () => {
+const TestPage = () => {
 
   const [formValue, setFormValue] = useState({
     firstName: '',
@@ -48,7 +48,7 @@ const RegisterPage = () => {
         <form onSubmit={handleRegisterBtn} id = "registrationForm">
           <label>First Name: <input type="text"
            name="firstName"
-          placeholder='Enter Your First Name'
+          placeholder='Enter Your First Name' 
           onChange={handleChange}/></label>
           <br />
           <label>Last Name: <input type="text" 
@@ -68,11 +68,11 @@ const RegisterPage = () => {
           <br />
           <input type="submit" value="Register" className='registerButton'/>
         </form>
-        <a href="/login">Login</a>
+        <Link to="/home" id='homeLink'>Go Back Home!</Link>
       </div>
     </div>
 
     </>
   );
 }
-export default RegisterPage;
+export default Test;

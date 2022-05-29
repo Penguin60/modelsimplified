@@ -7,10 +7,10 @@ const HomeProducts = (props) => {
     <div className="secondHome">
         <h1 id = "productsGreeting">High Quality <br />Premade Cards </h1>
         <nav>
-        <Link to="/productsPage" id='productsLink'>Visit Our Products Page!</Link>
-        <Link to="/register">Register</Link>
+        <Link to="/products" id='productsLink'>Visit Our Products Page!</Link>
       </nav>
         {props.children}
+        <img src = "trumpsimplified.png" id = "homeProducts"></img>
     </div>
       </>
     );
