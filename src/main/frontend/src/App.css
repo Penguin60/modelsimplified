@@ -29,7 +29,7 @@ img {
   margin-top: 10px;
 }
 
-#greetingMessage {
+.greetingMessage {
  text-align: left;
  padding-top: 325px;
  padding-left: 200px;
@@ -142,7 +142,7 @@ body {
 	color: #00b4ff;
 	font-size: 20px;
 	position: relative;
-	left: -447px;
+	left: -510px;
 }
 
 #newProductBtn:hover {
@@ -150,16 +150,55 @@ body {
 	color: #00b4ff;
 }
 
-.buyItNowBtn {
-	background-color: #00b4ff;
-	border: none;
-	font-size: 20px;
-	border-radius: 10px;
-	padding: 6px;
-	color: white;
-	font-family:monospace;
+.css-1hw9j7s {
 	position: relative;
-	margin-bottom: 7px;
+	bottom: 20px;
+}
+
+.css-1bvyez6 {
+	position: relative;
+	left: 540px;
+	bottom: 10px;
+}
+
+.css-1x5jdmq {
+	height: 100% !important;
+}
+
+button.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButtonBase-root.css-79xub {
+	position: relative;
+	left: 335.58px;
+}
+
+.css-xn6ruc > :not(style) {
+width: 50ch !important;
+}
+
+.MuiFormControl-root.MuiTextField-root.css-i44wyl {
+	position: relative;
+	left: 318.875px;
+}
+
+.css-1eqycna {
+	position: relative;
+	left: 950px;
+}
+
+.css-1nxul2a {
+	font-size: small !important;
+}
+
+#navProductsLink {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	float: right;
+}
+
+#navLogout {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
 }
 
 .productDiv {
@@ -186,13 +225,14 @@ body {
 }
 
 .form-box {
-	min-width: 100%;
-	height: 100vh;
 	box-sizing: border-box;
-	margin: 0;
 	padding: 5vw;
 	background-color: white;
 	position: relative;
+	border-radius: 25px;
+	right: 150px;
+	top: 75px;
+	margin-left: 300px;
 }
 .form-box h1{
 	font-size: 35px;
@@ -203,8 +243,6 @@ body {
 .form-box input, textarea{
 	display: block;
 	width: 100%;
-	padding: .5rem .8rem .5rem .8rem;
-	margin: .9vw 0;
 	font-size: 20px;
 }
 
