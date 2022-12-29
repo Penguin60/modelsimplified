@@ -1,5 +1,4 @@
-# modelsimplified
-custom characters
+# Modelsimplified
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Modelsimplified is a full-stack Spring & React product site which allows customers to register and buy products online.
 
